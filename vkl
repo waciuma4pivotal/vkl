@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -e
+USER_INITIALS=$1
+HOURS=$2
+if [ -z $HOURS ]; then
+  CURRENT_HOUR=`date +%H | sed 's/^0//'`
+  HOURS=`expr 18 - $CURRENT_HOUR`
+  echo "Hours: $HOURS"
+fi
+
+USER_PREFIX=$(grep $USER_INITIALS ~/.git-authors | awk -F '; ' '{print $2}')
+if [[ $USER_PREFIX == "" ]]; then
+  echo 'Unkown user'
+  exit 1
+fi
+
+USER_DOMAIN=$(grep domain ~/.git-authors | awk -F ': ' '{print $2}')
+USER="$USER_PREFIX@$USER_DOMAIN"
+
+if [[ `lpass status` != *$USER* ]]; then
+  lpass login $USER
+fi
+
+/usr/bin/ssh-add -D
+lpass show --notes 'Productivity Tools/id_rsa' | /usr/bin/ssh-add -t ${HOURS}H -
+
+exit 0
