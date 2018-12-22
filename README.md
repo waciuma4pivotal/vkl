@@ -3,16 +3,16 @@
 Use your [github ssh keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) with ease!
 
 ## Installation
-* Copy file into your path.
-* Make the file executable. (chmod +x) 
+* Copy the script into your path.
+* Make the script executable. (chmod +x) 
 
 ## Dependencies
 * [Lastpass-CLI](https://github.com/lastpass/lastpass-cli)
-* Save your github ssh private key in a secure note in the Lastpass `Productivity Tools` folder.
-* .git-authors file is present in home directory. File should be in [git-duet](https://github.com/git-duet/git-duet) format.
+* Github ssh private key saved in a secure note in Lastpass `Productivity Tools` folder.
+* .git-authors file present in home directory. File should be in [git-duet](https://github.com/git-duet/git-duet) format.
     
 ## Usage
-Call vkl with the initials of the user and the number of hours the SSH keys should be added to the ssh-agent. If the user is not logged into lastpass on the command line, they will be prompted to login.
+Call vkl with the initials of the user and the number of hours you intend to use your ssh keys. If the user is not logged into lastpass on the command line, they will be prompted to login.
 
 Example:
 `vkl ww 3`
@@ -21,3 +21,6 @@ If it is before 6pm local time, omitting the number will autoset the key to expi
 
 Example:
 `vkl ww`
+
+## Acknowledgements
+Hat tip to [Paul Nikonowicz](https://github.com/pnikonowicz) and Andreas Voellmer who passed along earlier versions of this script.
