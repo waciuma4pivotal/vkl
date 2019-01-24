@@ -24,3 +24,14 @@ Example:
 
 ## Acknowledgements
 Hat tip to [Paul Nikonowicz](https://github.com/pnikonowicz) and Andreas Voellmer who passed along earlier versions of this script.
+
+## FAQ
+
+* ssh_askpass: exec(/usr/X11R6/bin/ssh-askpass): No such file or directory
+```
+brew install ssh-askpass
+sudo brew services start theseal/ssh-askpass/ssh-askpass
+pushd /usr/X11r6/bin
+sudo ln -s /usr/local/bin/ssh-askpass ssh-askpass
+popd
+```
