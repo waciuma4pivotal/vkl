@@ -4,7 +4,7 @@ USER_INITIALS=$1
 HOURS=$2
 
 if [[ -z $USER_INITIALS ]]; then
-  echo "Usage: vkl user_initials"
+  echo "Usage: vkl user_initials [hours_to_login]"
   exit 1
 fi
 
