@@ -23,7 +23,7 @@ Example:
 `vkl ww`
 
 ## Acknowledgements
-Hat tip to [Paul Nikonowicz](https://github.com/pnikonowicz) and Andreas Voellmer who passed along earlier versions of this script.
+Hat tip to [Paul Nikonowicz](https://github.com/pnikonowicz) and [Andreas Voellmer](https://github.com/sigilite) who passed along earlier versions of this script.
 
 ## FAQ
 
