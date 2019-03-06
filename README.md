@@ -22,6 +22,11 @@ If it is before 6pm local time, omitting the number will autoset the key to expi
 Example:
 `vkl ww`
 
+You may also provide the lastpass email instead of your initials.
+
+Example:
+`vkl mylastpass@email.com`
+
 ## Acknowledgements
 Hat tip to [Paul Nikonowicz](https://github.com/pnikonowicz) and [Andreas Voellmer](https://github.com/sigilite) who passed along earlier versions of this script.
 
