@@ -27,6 +27,8 @@ if [[ `lpass status` != *$USER* ]]; then
   lpass login $USER
 fi
 
+unset DISPLAY # forces ssh-add to ask for the password in the terminal
+
 /usr/bin/ssh-add -D
 lpass show --notes 'Productivity Tools/id_rsa' | /usr/bin/ssh-add -t ${HOURS}H -
 
