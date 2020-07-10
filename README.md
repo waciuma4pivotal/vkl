@@ -4,7 +4,6 @@ Use your [github ssh keys](https://help.github.com/articles/generating-a-new-ssh
 
 ## Installation
 * Copy the script into your path.
-* Make the script executable. (chmod +x) 
 
 ## Dependencies
 * [Lastpass-CLI](https://github.com/lastpass/lastpass-cli)
