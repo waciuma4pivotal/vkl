@@ -8,9 +8,16 @@ if [[ -z $USER_INITIALS ]]; then
   exit 1
 fi
 
+get_hours_till_quitting_time(){
+  CURRENT_HOUR=$(date +%H | sed 's/^0//')
+  QUITTING_HOUR=18
+  MARGIN_OF_ERROR=1
+
+  echo $(expr $QUITTING_HOUR - $CURRENT_HOUR + $MARGIN_OF_ERROR)
+}
+
 if [[ -z $HOURS ]]; then
-  CURRENT_HOUR=`date +%H | sed 's/^0//'`
-  HOURS=`expr 18 - $CURRENT_HOUR`
+  HOURS=$(get_hours_till_quitting_time)
   echo "Hours: $HOURS"
 fi
 
